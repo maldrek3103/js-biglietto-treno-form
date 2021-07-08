@@ -43,19 +43,30 @@ button.addEventListener('click', function () {
 
     // Calcolare il prezzo del biglietto in base alla percorrenza
     var basePrice = 0.21 * distanceValue;
-    var baseDiscount = 'Tariffa standard';
+    var baseDiscount = ' Tariffa standard';
 
     // Verificare l'età dell'utente
     if (ageValue === 'minor') {
         // Applicare lo sconto del 20%
         basePrice *= 0.8;
-        baseDiscount = 'Applicato sconto minorenni';
+        baseDiscount = ' Applicato sconto minorenni';
     }
     if (ageValue === 'over65') {
         // Applicare lo sconto del 40%
         basePrice *= 0.6;
-        baseDiscount = 'Applicato sconto over 65 anni'
+        baseDiscount = ' Applicato sconto over 65 anni'
     }
 
+    // Creare un generatore di numeri random compresi tra 10000 e 19999 per il numero del treno
+    var trainNumber = Math.floor(Math.random() * (19999 - 10000) + 10000);
 
+    // Creare un generatore di numeri random compresi tra 1000 e 1999 per il numero della carrozza
+    var carriageNumber = Math.floor(Math.random() * (1999 - 1000) + 1000);
+
+    // Stampare gli input all'interno della pagina HTML
+    printName.innerHTML = printName.innerHTML + nameValue;
+    printDiscount.innerHTML = printDiscount.innerHTML + baseDiscount;
+    printTrainNumber.innerHTML = printTrainNumber.innerHTML + trainNumber;            // Creare un generatore di numeri casuali compresi tra 1000 e 1999
+    printCarriage.innerHTML = printCarriage.innerHTML + carriageNumber;
+    printPrice.innerHTML = printPrice.innerHTML + basePrice + ' Euro';
 })
