@@ -13,6 +13,73 @@
 
 <body>
 
+    <!-- FORM SECTION -->
+    <section id="ticket-form" class="container">
+        <div class="row my-5">
+            <!-- TITLE -->
+            <div class="col-12">
+                <h1>Fai qui il tuo biglietto!</h1>
+            </div>
+            <div class="datas mt-5 mb-3">
+                <h2>Inserisci i tuoi dati!</h2>
+                <p>Calcoleremo in automatico il prezzo del tuo biglietto.</p>
+            </div>
+            <!-- NAME -->
+            <div class="col-3 my-2">
+                <label for="fullname">Nome completo:</label><br>
+                <input type="text" id="fullname"><br>
+            </div>
+            <!-- DISTANCE -->
+            <div class="col-3 my-2">
+                <label for="distance">Distanza percorso:</label><br>
+                <input type="number" id="distance" min="10" max="5000" step="1" value="10"><br>
+            </div>
+            <!-- AGE -->
+            <div class="col-3 my-2">
+                <label for="age">Fascia d'età:</label><br>
+                <select id="age">
+                    <option value="minor">Sotto 18 anni</option>
+                    <option value="major">Tra 18 e 65 anni (compresi)</option>
+                    <option value="over65">Sopra 65 anni</option>
+                </select>
+            </div>
+            <!-- INPUT BUTTON -->
+            <div class="col-12 my-3">
+                <button type="button" id="calculate-ticket" class="btn-dark rounded-pill px-3">Calcola il tuo
+                    biglietto</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CREATED TICKET -->
+    <section id="generated-ticket" class="container">
+        <div class="row my-5">
+            <div class="col-12 my-5">
+                <h2>Questo è il tuo biglietto!</h2>
+            </div>
+            <!-- NAME -->
+            <div class="col-12">
+                <h5 id="ticket-name">Nome completo: <span></span></h5>
+            </div>
+            <!-- DISCOUNT -->
+            <div class="col-12">
+                <h5 id="applied-discount">Tariffa applicata: <span></span></h5>
+            </div>
+            <!-- TRAIN NUMBER -->
+            <div class="col-12">
+                <h5 id="train-number">Il numero del tuo treno: <span></span></h5>
+            </div>
+            <!-- CARRIAGE -->
+            <div class="col-12">
+                <h5 id="carriage">Il numero della tua carrozza: <span></span></h5>
+            </div>
+            <!-- TICKET PRICE -->
+            <div class="col-12">
+                <h5 id="price">Prezzo biglietto: <span></span></h5>
+            </div>
+        </div>
+    </section>
+
 
 
 
