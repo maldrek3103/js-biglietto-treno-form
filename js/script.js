@@ -1,3 +1,4 @@
+// Creare variabili utili
 // Raccogliere i dati inseriti nel form
 // Calcolare il prezzo del biglietto in base alla percorrenza
 // Applicare uno sconto in base all'età
@@ -34,6 +35,27 @@ var printPrice = document.getElementById('price');
 button.addEventListener('click', function () {
 
     // Esegui al click del button
+
+    // Recuperare i dati inseriti nel form
+    var nameValue = getFullName.value;
+    var distanceValue = getDistance.value;
+    var ageValue = getAge.value;
+
+    // Calcolare il prezzo del biglietto in base alla percorrenza
+    var basePrice = 0.21 * distanceValue;
+    var baseDiscount = 'Tariffa standard';
+
+    // Verificare l'età dell'utente
+    if (ageValue === 'minor') {
+        // Applicare lo sconto del 20%
+        basePrice *= 0.8;
+        baseDiscount = 'Applicato sconto minorenni';
+    }
+    if (ageValue === 'over65') {
+        // Applicare lo sconto del 40%
+        basePrice *= 0.6;
+        baseDiscount = 'Applicato sconto over 65 anni'
+    }
 
 
 })
