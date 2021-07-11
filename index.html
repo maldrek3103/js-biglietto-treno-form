@@ -44,7 +44,7 @@
                 </select>
             </div>
             <!-- INPUT BUTTON -->
-            <div class="col-12 my-3">
+            <div class="col-6 my-3">
                 <button type="button" id="calculate-ticket" class="btn-dark rounded-pill px-3">Calcola il tuo
                     biglietto</button>
             </div>
@@ -59,23 +59,27 @@
             </div>
             <!-- NAME -->
             <div class="col-12">
-                <h5 id="ticket-name"><strong>Nome completo: </strong></h5>
+                <h5><strong>Nome completo: </strong> <span id="ticket-name" class="printed"></span></h5>
             </div>
             <!-- DISCOUNT -->
             <div class="col-12">
-                <h5 id="applied-discount"><strong>Tariffa applicata: </strong></h5>
+                <h5><strong>Tariffa applicata: </strong> <span id="applied-discount" class="printed"></span></h5>
             </div>
             <!-- TRAIN NUMBER -->
             <div class="col-12">
-                <h5 id="train-number"><strong>Il numero del tuo treno: </strong></h5>
+                <h5><strong>Il numero del tuo treno: </strong> <span id="train-number" class="printed"></span></h5>
             </div>
             <!-- CARRIAGE -->
             <div class="col-12">
-                <h5 id="carriage"><strong>Il numero della tua carrozza: </strong></h5>
+                <h5><strong>Il numero della tua carrozza: </strong> <span id="carriage" class="printed"></span></h5>
             </div>
             <!-- TICKET PRICE -->
             <div class="col-12">
-                <h5 id="price"><strong>Prezzo biglietto: </strong></h5>
+                <h5><strong>Prezzo biglietto: </strong> <span id="price" class="printed"></span></h5>
+            </div>
+            <!-- CLEAR BUTTON -->
+            <div class="col-6 my-3">
+                <button type="button" id="clear-ticket" class="btn-dark rounded-pill px-3">Clear</button>
             </div>
         </div>
     </section>

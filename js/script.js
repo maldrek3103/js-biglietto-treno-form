@@ -36,6 +36,8 @@ button.addEventListener('click', function () {
 
     // Esegui al click del button
 
+    // Clear HTML (Ad ogni click l'HTML tornerà alla sua situazione di default) ???????????????????????????????????
+
     // Recuperare i dati inseriti nel form
     var nameValue = getFullName.value;
     var distanceValue = getDistance.value;
@@ -49,12 +51,12 @@ button.addEventListener('click', function () {
     if (ageValue === 'minor') {
         // Applicare lo sconto del 20%
         basePrice *= 0.8;
-        baseDiscount = ' Applicato sconto minorenni';
+        baseDiscount = ' Tariffa minorenni';
     }
     if (ageValue === 'over65') {
         // Applicare lo sconto del 40%
         basePrice *= 0.6;
-        baseDiscount = ' Applicato sconto over 65 anni'
+        baseDiscount = ' Tariffa over 65 anni';
     }
 
     // Creare un generatore di numeri random compresi tra 10000 e 19999 per il numero del treno
@@ -64,9 +66,29 @@ button.addEventListener('click', function () {
     var carriageNumber = Math.floor(Math.random() * (1999 - 1000) + 1000);
 
     // Stampare gli input all'interno della pagina HTML
-    printName.innerHTML = printName.innerHTML + nameValue;
-    printDiscount.innerHTML = printDiscount.innerHTML + baseDiscount;
-    printTrainNumber.innerHTML = printTrainNumber.innerHTML + trainNumber;            // Creare un generatore di numeri casuali compresi tra 1000 e 1999
-    printCarriage.innerHTML = printCarriage.innerHTML + carriageNumber;
-    printPrice.innerHTML = printPrice.innerHTML + basePrice + ' Euro';
+    printName.innerHTML = nameValue;
+    printDiscount.innerHTML = baseDiscount;
+    printTrainNumber.innerHTML = trainNumber;
+    printCarriage.innerHTML = carriageNumber;
+    printPrice.innerHTML = basePrice.toFixed(2) + ' Euro';
+
 })
+
+// =========================== CLEAR BUTTON =============================
+
+
+var clearButton = document.getElementById('clear-ticket');
+
+clearButton.addEventListener('click', function () {
+
+    // Rimuovere 
+    var getPrinted = document.getElementsByClassName('printed');
+
+    for (var i = 0; i < getPrinted.length; i++) {
+        var currentPrinted = getPrinted[i];
+        currentPrinted.innerHTML = '';
+    }
+})
+
+
+// =======================================================================
